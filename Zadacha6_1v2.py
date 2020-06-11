@@ -97,6 +97,19 @@ class Cut(farming_simulate):
     else:
       return "У скотины с кличкой " + self.name + " шерсти больше нет."
 
+
+
+#Второй файл
+goose_one = Eggs("Серый",120)
+goose_two = Eggs("Белый",9)
+cow = Milk("Манька",150)
+sheep_one = Cut("Барашек",100)
+sheep_two = Cut("Кудрявый",51)
+chiken_one = Eggs("Ко-Ко",12)
+chiken_two = Eggs("Кукареку",12)
+goat_one = Milk("Рога",40)
+goat_two = Milk("Копыта",20)
+duck = Eggs("Кряква",10)
 #Либо сделать это в отдельный файл
 cook_book = [
 goose_one,
@@ -110,27 +123,14 @@ goat_one,
 goat_two,
 duck
 ]
-
-#Второй файл
-goose_one = Eggy("Серый",120)
-goose_two = Eggy("Белый",9)
-cow = Milky("Манька",150)
-sheep_one = Cut("Барашек",100)
-sheep_two = Cut("Кудрявый",51)
-chiken_one = Eggs("Ко-Ко",12)
-chiken_two = Eggs("Кукареку",12)
-goat_one = Milk("Рога",40)
-goat_two = Milk("Копыта",20)
-duck_k = Eggs("Кряква",10)
-
 total_weight = 0 
 highest_weight = 0
 
 
 
-for animal in animals_list:
+for animal in cook_book:
 
-  if animal.hungriness == 'Животное голодно':
+  if animal.eat == 'Животное голодно':
     animal.feeding()
 
   if animal.type == 'Несет яйца':
